@@ -38,3 +38,23 @@ dbGetQuery(conn, "SELECT *
 
 # Here, I first connected with the database on duckdb using dbConnect(). I then checked the connection, and ran some tests to see the data. Then, I used dbGetQuery, and wrote an SQL query to see the first 10 rows from the flights table.
 ```
+
+### b.
+
+```{r}
+#| label: Part 1b
+
+# i.
+
+dbGetQuery(conn, "SELECT COUNT(*) AS total_flights
+            FROM flights")
+
+# ii.
+
+dbGetQuery(conn, "SELECT carrier, COUNT(*) AS total_flights_by_carrier
+            FROM flights
+            GROUP BY carrier")
+
+# In this part, I first did a query to select the total amount of flights, by counting the total rows in the flights table. Then, I made a query to count the total flights for each carrier, by using GROUP BY to seperate the table by the carrier.
+
+```
