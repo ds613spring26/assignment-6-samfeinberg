@@ -58,3 +58,15 @@ dbGetQuery(conn, "SELECT carrier, COUNT(*) AS total_flights_by_carrier
 # In this part, I first did a query to select the total amount of flights, by counting the total rows in the flights table. Then, I made a query to count the total flights for each carrier, by using GROUP BY to seperate the table by the carrier.
 
 ```
+
+### c.
+
+```{r}
+#| label: Part 1c
+
+dbGetQuery(conn, "SELECT AVG (dep_delay) AS avg_dep_delay,
+            FROM flights")
+
+# Here, I made a query to take the average of dep_delay and return that value.
+
+```
