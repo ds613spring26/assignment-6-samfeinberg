@@ -9,10 +9,32 @@ editor: visual
 #| label: Set-up
 
 setwd("C:/Users/samgf/Desktop/assignment-6-samfeinberg")
+getwd()
 
 library(tidyverse)
 library(DBI)
 library(dbplyr)
 library(duckdb)
+library(nycflights13)
 
+```
+
+### **Part I**
+
+### a.
+
+```{r}
+#| label: Part 1a
+
+conn <- dbConnect(duckdb(), "../assignment-6-samfeinberg/data/flights.duckdb", read_only = TRUE)
+
+dbIsValid(conn)
+dbListTables(conn)
+dbListFields(conn, "flights")
+
+dbGetQuery(conn, "SELECT *
+            FROM flights
+            LIMIT 10;")
+
+# Here, I first connected with the database on duckdb using dbConnect(). I then checked the connection, and ran some tests to see the data. Then, I used dbGetQuery, and wrote an SQL query to see the first 10 rows from the flights table.
 ```
