@@ -70,3 +70,18 @@ dbGetQuery(conn, "SELECT AVG (dep_delay) AS avg_dep_delay,
 # Here, I made a query to take the average of dep_delay and return that value.
 
 ```
+
+### d. 
+
+```{r}
+#| label: Part 1d
+
+dbGetQuery(conn, "SELECT dest, COUNT(*) AS total_flights,
+           FROM flights
+           GROUP BY dest
+           ORDER BY total_flights DESC
+           LIMIT 5")
+
+# In this part, my query selected destination and a new variable called total flights. I used GROUP BY to count total flights at each destination, and ORDER BY to sort the flights at each destination in descending order. I lastly used LIMIT to only see the top 5 destinations for total flights.
+
+```
