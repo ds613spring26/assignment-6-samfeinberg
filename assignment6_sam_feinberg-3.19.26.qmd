@@ -1,0 +1,18 @@
+---
+title: "Assignment 6 SQL"
+author: "Sam Feinberg"
+format: html
+editor: visual
+---
+
+```{r}
+#| label: Set-up
+
+setwd("C:/Users/samgf/Desktop/assignment-6-samfeinberg")
+
+library(tidyverse)
+library(DBI)
+library(dbplyr)
+library(duckdb)
+
+```
