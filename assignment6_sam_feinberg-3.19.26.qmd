@@ -85,3 +85,22 @@ dbGetQuery(conn, "SELECT dest, COUNT(*) AS total_flights,
 # In this part, my query selected destination and a new variable called total flights. I used GROUP BY to count total flights at each destination, and ORDER BY to sort the flights at each destination in descending order. I lastly used LIMIT to only see the top 5 destinations for total flights.
 
 ```
+
+### e.
+
+```{r}
+#| label: Part 1e
+
+avg_delay_by_carrier <- dbGetQuery(conn, "SELECT carrier, 
+                                   AVG(arr_delay) AS avg_arr_delay,
+                                   FROM flights,
+                                   GROUP BY carrier
+                                   ORDER BY avg_arr_delay DESC")
+avg_delay_by_carrier
+
+dbDisconnect(conn)
+dbIsValid(conn)
+
+# In this part, I used a SQL query to find the average arrival delay for each carrier, and sort that from greatest to least. I saved the table in my environment as avg_delay_by_carrier. Finally, I ended the connection and checked that it was no longer valid.
+
+```
