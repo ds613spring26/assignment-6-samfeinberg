@@ -112,3 +112,9 @@ dbIsValid(conn)
 ![](images/clipboard-4229940328.png){width="617"}
 
 In this part, I ran an SQL query in DuckDB to show the first 10 lines of the flights dataset.
+
+### b.
+
+![](images/clipboard-2426151856.png)
+
+In this part, I used this query to count total flights for each carrier, and used ODER BY total_flights_by_carrier DESC to sort the table in descending order.
