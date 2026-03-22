@@ -130,3 +130,7 @@ Here, I created the column avg_dep_delay, and calculated it when grouping by mon
 ![](images/clipboard-1578348258.png){width="563"}
 
 Here, I used "GROUP BY origin, dest" to group the data into all the routes taken by flights in the dataset. I found the total number flights that took each route, and sorted the top 10 in descending order.
+
+### e.
+
+In this part, I exported the table from part 2b as a CSV. It is in the GitHub repository.
