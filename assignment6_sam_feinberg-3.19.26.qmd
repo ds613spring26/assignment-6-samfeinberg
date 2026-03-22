@@ -115,6 +115,12 @@ In this part, I ran an SQL query in DuckDB to show the first 10 lines of the fli
 
 ### b.
 
-![](images/clipboard-2426151856.png)
+![](images/clipboard-2426151856.png){width="580"}
 
 In this part, I used this query to count total flights for each carrier, and used ODER BY total_flights_by_carrier DESC to sort the table in descending order.
+
+### c.
+
+![](images/clipboard-771293192.png)
+
+Here, I created the column avg_dep_delay, and calculated it when grouping by month.
