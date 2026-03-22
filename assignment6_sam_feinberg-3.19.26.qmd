@@ -104,3 +104,11 @@ dbIsValid(conn)
 # In this part, I used a SQL query to find the average arrival delay for each carrier, and sort that from greatest to least. I saved the table in my environment as avg_delay_by_carrier. Finally, I ended the connection and checked that it was no longer valid.
 
 ```
+
+### **Part II**
+
+### a. 
+
+![](images/clipboard-4229940328.png){width="617"}
+
+In this part, I ran an SQL query in DuckDB to show the first 10 lines of the flights dataset.
